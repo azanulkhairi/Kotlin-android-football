@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:context=".activity.TeamDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme">
+        <ImageView
+                android:id="@+id/image_team_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/name_team_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"/>
+            <TextView
+                    android:id="@+id/year_team_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"/>
+            <TextView
+                    android:id="@+id/std_team_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <android.support.design.widget.TabLayout
+                android:id="@+id/tabs_detail_team"
+                app:tabGravity="fill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="fixed"/>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_below="@+id/app_layout"
+            android:id="@+id/sw_team_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager_team_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
